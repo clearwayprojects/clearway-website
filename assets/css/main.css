@@ -2305,4 +2305,8 @@ button,
   display: block;
 }
 
-
+/* Remove the background rectangle behind the hamburger menu */
+#sidebar .toggle::after {
+  background: transparent !important;
+  box-shadow: none !important;
+}
