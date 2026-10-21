@@ -184,6 +184,50 @@ Free for personal and commercial use under the CCA 3.0 license
         transition: none;
       }
     }
+	
+	/* Mobile: separate the announcement bar from the menu toggle */
+@media screen and (max-width: 736px) {
+
+  /* Give the announcement a predictable height */
+  .delivery-announcement {
+    min-height: 64px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Use two compact, centered lines */
+  .delivery-announcement__inner {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .delivery-announcement__label {
+    font-size: 0.85em;
+    line-height: 1.4;
+  }
+
+  .delivery-announcement__message {
+    display: none;
+  }
+
+  .delivery-announcement__cta {
+    font-size: 0.95em;
+    line-height: 1.4;
+  }
+
+  /* Move the template's hamburger below the announcement */
+  #sidebar .toggle {
+    top: 64px !important;
+  }
+
+  /* Remove the background patch behind the hamburger */
+  #sidebar .toggle::after {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}
   </style>
 </head>
 
